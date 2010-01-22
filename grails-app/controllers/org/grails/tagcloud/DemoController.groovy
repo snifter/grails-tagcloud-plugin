@@ -1,11 +1,10 @@
 package org.grails.tagcloud
 
+import org.codehaus.groovy.grails.plugins.web.taglib.JavascriptTagLib 
+
 class DemoController {
 
     def index = {
-        if (!request[JavascriptTagLib.INCLUDED_LIBRARIES]) {
-            request[JavascriptTagLib.INCLUDED_LIBRARIES] = []
-        }
-        request[JavascriptTagLib.INCLUDED_LIBRARIES] << "jquery"
+        
     }
 }
