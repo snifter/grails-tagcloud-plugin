@@ -14,7 +14,7 @@ class TagCloudTagLib {
                 g.resource(dir: 'js/jquery', file:'jquery-1.3.2.js') + '"></script>'
 
         out << '<script type="text/javascript" src="' +
-            g.resource(dir: 'js', file:'jquery.tagcloud.js') + '"></script>'
+            g.resource(dir: pluginContextPath + '/js', file:'jquery.tagcloud.js') + '"></script>'
 
         def color
         if (attrs.color) {
@@ -25,6 +25,6 @@ class TagCloudTagLib {
 
 
 
-        out << g.render(template: '/shared/cloud', model: [color: color])
+        out << g.render(template: '/shared/cloud', model: [color: color], plugin: 'tagcloud')
     }
 }
