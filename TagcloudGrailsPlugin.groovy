@@ -7,7 +7,8 @@ class TagcloudGrailsPlugin {
     def dependsOn = [jquery: "1.3.2.4"]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-            "grails-app/views/error.gsp"
+            "grails-app/views/error.gsp",
+            "grails-app/controller/org/grails/tagcloud/DemoController.groovy"
     ]
 
     // TODO Fill in these fields
