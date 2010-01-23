@@ -19,9 +19,9 @@ class TagCloudTagLib {
         def color
         if (attrs.color) {
             def c = attrs.color
-            color = ['start': c.'start' ?: '#cde', 'end': c.'end' ?: '#f52']
+            color = [start: c.start ?: '#cde', end: c.end ?: '#f52']
         }
-        else color = ['start': '#cde', 'end': '#f52']
+        else color = [start: '#cde', end: '#f52']
 
 
 
