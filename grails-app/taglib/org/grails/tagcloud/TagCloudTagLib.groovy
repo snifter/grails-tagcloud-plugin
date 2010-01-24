@@ -23,8 +23,18 @@ class TagCloudTagLib {
         }
         else color = [start: '#cde', end: '#f52']
 
+        def size
+        if (attrs.size) {
+            def s = attrs.size
+            size = [start: s.start ?: 14, end: s.end ?: 18, unit: s.unit ?: 'pt']
+        }
+        else size = [start: 14, end: 18, unit: 'pt']
 
 
-        out << g.render(template: '/shared/cloud', model: [color: color], plugin: 'tagcloud')
+        out << g.render(
+            template: '/shared/cloud',
+            model: [color: color, size: size],
+            plugin: 'tagcloud'
+        )
     }
 }

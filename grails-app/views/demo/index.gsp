@@ -10,8 +10,10 @@
   </head>
   <body>
     <h1>Sample line</h1>
-    <g:link action="index">Link</g:link>
-    <tc:tagCloud color="${['start': '#0ff']}"/>
+
+    <tc:tagCloud color="${[start: '#ddd', end: '#000']}"
+                 size="${[start: 10, end: 30, unit: 'px']}"
+                 />
     
   </body>
 </html>
