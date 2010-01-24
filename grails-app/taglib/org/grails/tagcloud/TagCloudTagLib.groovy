@@ -1,8 +1,13 @@
 package org.grails.tagcloud
 
 import org.codehaus.groovy.grails.plugins.web.taglib.JavascriptTagLib
+import org.springframework.context.ApplicationContextAware
+import org.springframework.context.ApplicationContext
 
-class TagCloudTagLib {
+class TagCloudTagLib implements ApplicationContextAware {
+
+    ApplicationContext applicationContext
+    
     static namespace = "tc"
 
     def tagCloud = { attrs, body ->
@@ -30,7 +35,12 @@ class TagCloudTagLib {
         }
         else size = [start: 14, end: 18, unit: 'pt']
 
-        def tags = attrs.tags ?: [:]
+        def tags =[:]
+        if (!attrs.bean) tags = attrs.tags ?: [:]
+        else {
+            if (applicationContext.getBean('pluginManager')?.hasGrailsPlugin("taggable"))
+                tags = TagCloudUtil.tags(attrs.bean)
+        }
 
         out << g.render(
             template: '/shared/cloud',
