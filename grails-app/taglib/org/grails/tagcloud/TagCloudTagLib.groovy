@@ -30,10 +30,17 @@ class TagCloudTagLib {
         }
         else size = [start: 14, end: 18, unit: 'pt']
 
+        def tags = attrs.tags ?: [:]
 
         out << g.render(
             template: '/shared/cloud',
-            model: [color: color, size: size],
+            model: [
+                color: color,
+                size: size,
+                tags: tags,
+                controller: attrs.controller ?: controllerName,
+                action: attrs.action ?: actionName,
+            ],
             plugin: 'tagcloud'
         )
     }

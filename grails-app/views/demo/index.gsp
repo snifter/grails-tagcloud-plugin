@@ -9,10 +9,11 @@
     --%>
   </head>
   <body>
-    <h1>Sample line</h1>
+    <h1>Tag cloud plugin demo</h1>
 
-    <tc:tagCloud color="${[start: '#ddd', end: '#000']}"
-                 size="${[start: 10, end: 30, unit: 'px']}"
+    <tc:tagCloud tags="${[test1: 5, test2: 10, 'test3': 15, 'test4': 20, 'test5': 10]}"
+                 controller="test"
+                 action="jump"
                  />
     
   </body>
