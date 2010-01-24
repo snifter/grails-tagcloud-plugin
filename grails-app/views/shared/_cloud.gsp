@@ -18,6 +18,7 @@
     <g:link controller="${controller}"
             action="${action}"
             id="${entry.key}"
-            rel="${entry.value}">${entry.key}</g:link>
+            rel="${entry.value}"
+            params="${params}">${entry.key}</g:link>
   </g:each>
 </div>

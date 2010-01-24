@@ -12,8 +12,7 @@
     <h1>Tag cloud plugin demo</h1>
 
     <tc:tagCloud tags="${[test1: 5, test2: 10, 'test3': 15, 'test4': 20, 'test5': 10]}"
-                 controller="test"
-                 action="jump"
+                 action="demo"
                  />
     
   </body>

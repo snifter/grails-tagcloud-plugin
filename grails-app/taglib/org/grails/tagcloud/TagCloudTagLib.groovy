@@ -39,7 +39,7 @@ class TagCloudTagLib {
                 size: size,
                 tags: tags,
                 controller: attrs.controller ?: controllerName,
-                action: attrs.action ?: actionName,
+                action: attrs.action ?: '',
             ],
             plugin: 'tagcloud'
         )
