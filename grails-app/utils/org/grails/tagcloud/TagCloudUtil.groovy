@@ -6,11 +6,13 @@ package org.grails.tagcloud
  */
 class TagCloudUtil {
 
-    static tags = {taggableClass ->
+    static tags = {clazz ->
         def tags = [:]
 
-        taggableClass.tags?.each {
-            tags.put(it, taggableClass.countByTag(it))
+        if (clazz.hasProperty('allTags')) {
+            clazz.allTags?.each {
+                tags.put(it, clazz.countByTag(it))
+            }
         }
 
         tags
