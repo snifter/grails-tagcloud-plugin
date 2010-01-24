@@ -4,6 +4,11 @@ import org.codehaus.groovy.grails.plugins.web.taglib.JavascriptTagLib
 import org.springframework.context.ApplicationContextAware
 import org.springframework.context.ApplicationContext
 
+/**
+ * This tag liblary provides tag for simple creating Tag Cloud
+ *
+ * @author Marek Podsiadły <marekpodsiadly@gmail.com>
+ */
 class TagCloudTagLib implements ApplicationContextAware {
 
     ApplicationContext applicationContext
