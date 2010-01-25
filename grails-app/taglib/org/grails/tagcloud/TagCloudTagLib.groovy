@@ -24,7 +24,7 @@ class TagCloudTagLib implements ApplicationContextAware {
                 g.resource(dir: 'js/jquery', file:'jquery-1.3.2.js') + '"></script>'
 
         out << '<script type="text/javascript" src="' +
-            g.resource(dir: pluginContextPath + '/js', file:'jquery.tagcloud.js') + '"></script>'
+            g.resource(dir: pluginContextPath, file:'js/jquery.tagcloud.js') + '"></script>'
 
         def color
         if (attrs.color) {

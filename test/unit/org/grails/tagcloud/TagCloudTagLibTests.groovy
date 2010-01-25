@@ -12,6 +12,5 @@ class TagCloudTagLibTests extends TagLibUnitTestCase {
     }
 
     void testSomething() {
-
     }
 }
