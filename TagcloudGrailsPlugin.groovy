@@ -9,7 +9,8 @@ class TagcloudGrailsPlugin {
     def pluginExcludes = [
             "grails-app/views/error.gsp",
             "grails-app/controllers/org/grails/tagcloud/DemoController.groovy",
-            "grails-app/views/demo/index.gsp"
+            "grails-app/views/demo/index.gsp",
+            "web-app/js/jquery/"
     ]
 
     // TODO Fill in these fields
