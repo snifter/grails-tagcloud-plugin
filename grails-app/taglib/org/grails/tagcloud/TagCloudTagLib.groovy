@@ -71,6 +71,8 @@ class TagCloudTagLib implements ApplicationContextAware {
                 tags: tags,
                 controller: attrs.controller ?: controllerName,
                 action: attrs.action ?: '',
+                id: attrs.id ?: null,
+                paramName: attrs.paramName ?: null
             ],
             plugin: 'tagcloud'
         )
