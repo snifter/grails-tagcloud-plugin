@@ -15,6 +15,7 @@
                  controller="super"
                  action="czad"
                  paramName="myParam"
+                 sort="true"
                  />
     
   </body>

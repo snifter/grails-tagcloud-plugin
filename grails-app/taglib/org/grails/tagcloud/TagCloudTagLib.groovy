@@ -63,6 +63,8 @@ class TagCloudTagLib implements ApplicationContextAware {
                 tags = TagCloudUtil.tags(attrs.bean)
         }
 
+        if (attrs.sort?.toBoolean()) tags = tags.sort{it.key}
+
         out << g.render(
             template: '/shared/cloud',
             model: [
