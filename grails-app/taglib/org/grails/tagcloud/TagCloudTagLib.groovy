@@ -37,7 +37,7 @@ class TagCloudTagLib implements ApplicationContextAware {
         }
         if (!request[JavascriptTagLib.INCLUDED_LIBRARIES].contains("jquery"))
             out << '<script type="text/javascript" src="' +
-                g.resource(dir: 'js/jquery', file:'jquery-1.3.2.js') + '"></script>'
+                g.resource(dir: 'js', file: JavascriptTagLib.LIBRARY_MAPPINGS.jquery[0] + '.js') + '"></script>'
 
         out << '<script type="text/javascript" src="' +
             g.resource(dir: pluginContextPath, file:'js/jquery.tagcloud.js') + '"></script>'
