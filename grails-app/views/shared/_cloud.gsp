@@ -26,6 +26,7 @@
       <%
         params."${paramName}" = entry.key
         if (id) params.id = id
+        params.offset = 0
       %>
       <g:link controller="${controller}"
               action="${action}"
